@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Queries\Users\GetById\**" />
+    <EmbeddedResource Remove="Queries\Users\GetById\**" />
+    <None Remove="Queries\Users\GetById\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Common.Query\Common.Query.csproj" />
+    <ProjectReference Include="..\UserModule.Data\UserModule.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\Notifications\Create\" />
+    <Folder Include="Commands\Roles\" />
+    <Folder Include="Commands\Users\Edit\" />
+    <Folder Include="Commands\Users\ChangePassword\" />
+    <Folder Include="Commands\Users\Register\" />
+    <Folder Include="Queries\Notifications\GetFilter\" />
+    <Folder Include="Services\" />
+    <Folder Include="Queries\_DTOs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.4.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,30 @@
+﻿@page
+@model RegisterModel
+@{
+    Layout = "Shared/_Auth";
+    ViewData["title"] = "ثبت نام در سایت";
+}
+<form method="post" class="row register mt-4 pt-0">
+    <div class="text-danger col-12" asp-validation-summary="All"></div>
+    <div class="phone mb-5 col-12">
+        <input type="number" class="form-control" asp-for="PhoneNumber" placeholder="موبایل">
+    </div>
+    <div class="password mb-5 col-12 col-xl-6 col-lg-6">
+        <input type="password" class="form-control" asp-for="Password" placeholder="کلمه عبور">
+
+    </div>
+    <div class="rePassword mb-5 col-12 col-xl-6 col-lg-6">
+        <input type="password" class="form-control" asp-for="ConfirmPassword" placeholder="تکرار کلمه عبور">
+    </div>
+    <button class="btn btn-success btn-register  mt-4 d-flex justify-content-center align-items-center">
+        <span> ثبت نام</span>
+        <i class="fa fa-chevron-left"></i>
+    </button>
+</form>
+
+<div class="login-footer">
+    <a asp-page="Login">
+        <i class="zmdi zmdi-account-add"></i>
+        ورود به سایت
+    </a>
+</div>

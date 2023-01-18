@@ -32,8 +32,7 @@ public class RegisterUserCommandHandler : IBaseCommandHandler<RegisterUserComman
         {
             PhoneNumber = request.PhoneNumber,
             Password = Sha256Hasher.Hash(request.Password),
-            Avatar = "default.png",
-            Id = Guid.NewGuid()
+            Avatar = "default.png"
         };
         _context.Add(user);
         await _context.SaveChangesAsync(cancellationToken);

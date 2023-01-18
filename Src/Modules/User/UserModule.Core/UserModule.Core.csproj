@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Commands\Roles\**" />
     <Compile Remove="Queries\Users\GetById\**" />
+    <EmbeddedResource Remove="Commands\Roles\**" />
     <EmbeddedResource Remove="Queries\Users\GetById\**" />
+    <None Remove="Commands\Roles\**" />
     <None Remove="Queries\Users\GetById\**" />
   </ItemGroup>
 
@@ -19,7 +22,6 @@
 
   <ItemGroup>
     <Folder Include="Commands\Notifications\Create\" />
-    <Folder Include="Commands\Roles\" />
     <Folder Include="Commands\Users\Edit\" />
     <Folder Include="Commands\Users\ChangePassword\" />
     <Folder Include="Commands\Users\Register\" />
